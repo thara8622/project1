@@ -1,3 +1,6 @@
-def main():
-    print("hello")
-main()
+with open("name.txt", "r") as file:
+    lines = file.readlines()
+
+for line in lines:
+    print("hello,", line)
+
