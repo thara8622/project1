@@ -1,6 +1,9 @@
-with open("name.txt", "r") as file:
-    lines = file.readlines()
+import re
 
-for line in lines:
-    print("hello,", line)
+email = input("what's your email?")
+
+if re.search("@" and ".", email):
+    print("Valid")
+else:
+    print("Invalid")
 
