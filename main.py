@@ -1,9 +1,5 @@
-import re
+def f(*args, **kwargs):
+    print("Name:", args)
 
-email = input("what's your email?")
 
-if re.search("@" and ".", email):
-    print("Valid")
-else:
-    print("Invalid")
-
+f(gallon=20, sik=100)
