@@ -1,15 +1,13 @@
-
-import string
+#Create a function that generates random password, input is the length of the password
 import random
 
-def password():
-    result = ""
-    alphabet = "abcdefghijklmnopqrstuvwxyz1234567890"
-    for length in range(passwordlen()):
-        result = result + str(alphabet[random.randrange(0,passwordlen-1)])
-    print(result)
 
-def passwordlen():
-    passwordlen = int(input("enter the lenght of password you prefered:\n"))
-    return passwordlen
-password()
+def random_pass(passlen= int(input("Enter your prefer password lenght:"))):
+    alphabets = "abcdefghijklmnopqrstuvwxyz1234567890"
+    result = ""
+    for _ in range(passlen):
+        result = result + str(alphabets[random.randrange(0,passlen-1)])
+    return result
+
+
+print(random_pass())
